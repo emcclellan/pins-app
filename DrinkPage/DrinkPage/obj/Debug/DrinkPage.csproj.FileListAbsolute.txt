@@ -1,0 +1,7 @@
+C:\Users\User\source\repos\DrinkPage\DrinkPage\bin\Debug\DrinkPage.exe.config
+C:\Users\User\source\repos\DrinkPage\DrinkPage\bin\Debug\DrinkPage.exe
+C:\Users\User\source\repos\DrinkPage\DrinkPage\bin\Debug\DrinkPage.pdb
+C:\Users\User\source\repos\DrinkPage\DrinkPage\obj\Debug\DrinkPage.csprojAssemblyReference.cache
+C:\Users\User\source\repos\DrinkPage\DrinkPage\obj\Debug\DrinkPage.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\DrinkPage\DrinkPage\obj\Debug\DrinkPage.exe
+C:\Users\User\source\repos\DrinkPage\DrinkPage\obj\Debug\DrinkPage.pdb
