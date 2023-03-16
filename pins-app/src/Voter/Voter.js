@@ -40,6 +40,8 @@ class Voter extends React.Component{
     }
 
     getWinner(){
+        console.log('score1: ' + this.state.score1)
+        console.log('score2: ' + this.state.score2)
         if (this.state.score1 > this.state.score2){
             this.setState(state => ({
                 winner: "Hearth Stone 1"
@@ -63,7 +65,7 @@ class Voter extends React.Component{
                 score2: state.score2 + 1
             }));
         }
-        //this.getWinner();
+        this.getWinner();
     }
 
     decrement(contestant){
@@ -78,7 +80,7 @@ class Voter extends React.Component{
                 score2: state.score2 - 1
             }))
         }
-        //this.getWinner();
+        this.getWinner();
     }
 }
 
