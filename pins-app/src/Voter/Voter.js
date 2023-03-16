@@ -1,7 +1,7 @@
 import React from 'react';
-import './Body.css';
+import './Voter.css';
 
-class Body extends React.Component{
+class Voter extends React.Component{
     constructor(props){
         super(props);
         this.state = {score: 0};
@@ -35,4 +35,4 @@ class Body extends React.Component{
     }
 }
 
-export default Body
+export default Voter

@@ -1,12 +1,12 @@
 import './App.css';
 import Header from './Header.js';
-import Body from './Body/Body.js'
+import Voter from './Voter/Voter.js'
 
 function App() {
   return (
     <div className="App">
       <Header title="Pins App"></Header>
-      <Body></Body>
+      <Voter></Voter>
     </div>
   );
 }
