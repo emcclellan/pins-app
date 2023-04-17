@@ -10,8 +10,10 @@ class Voter extends React.Component{
             winner: "undecided"
         };
         
-        this.increment = this.increment.bind(this);
-        this.decrement = this.decrement.bind(this);
+        this.increment1 = this.increment1.bind(this);
+        this.decrement1 = this.decrement1.bind(this);
+        this.increment2 = this.increment2.bind(this);
+        this.decrement2 = this.decrement2.bind(this);
         this.winner = this.getWinner.bind(this);
     }
 
@@ -25,14 +27,14 @@ class Voter extends React.Component{
                     <div className='column'>
                         <img src={require('../Images/hearthStone1.PNG')} alt="hearthStone1"/>
                         <div>{this.state.score1}</div>
-                        <button className="button-vote" onClick={(e) => this.increment('1', e)}>Up</button>
-                        <button className="button-vote" onClick={(e) => this.decrement('1', e)}>Down</button>
+                        <button className="button-vote" onClick={this.increment1}>Up</button>
+                        <button className="button-vote" onClick={this.decrement1}>Down</button>
                     </div>
                     <div className='column'>
                         <img src={require('../Images/hearthStone2.PNG')} alt="hearthStone1"/>
                         <div>{this.state.score2}</div>
-                        <button className="button-vote" onClick={(e) => this.increment('2', e)}>Up</button>
-                        <button className="button-vote" onClick={(e) => this.decrement('2', e)}>Down</button>
+                        <button className="button-vote" onClick={this.increment2}>Up</button>
+                        <button className="button-vote" onClick={this.decrement2}>Down</button>
                     </div>
                 </div>
             </div>
@@ -40,8 +42,6 @@ class Voter extends React.Component{
     }
 
     getWinner(){
-        console.log('score1: ' + this.state.score1)
-        console.log('score2: ' + this.state.score2)
         if (this.state.score1 > this.state.score2){
             this.setState(state => ({
                 winner: "Hearth Stone 1"
@@ -54,33 +54,41 @@ class Voter extends React.Component{
         }
     }
 
-    increment(contestant){
-        if (contestant === '1'){
-            this.setState(state => ({
-                score1: state.score1 + 1
-            }));
-        }
-        else{
-            this.setState(state => ({
-                score2: state.score2 + 1
-            }));
-        }
-        this.getWinner();
+    increment1(){
+        this.setState(
+            {
+                score1: this.state.score1 + 1
+            },() => {
+                this.getWinner();
+            });
     }
 
-    decrement(contestant){
-        
-        if (contestant === '1'){
-            this.setState(state => ({
-                score1: state.score1 - 1
-            }));
-        }
-        else{
-            this.setState(state => ({
-                score2: state.score2 - 1
-            }))
-        }
-        this.getWinner();
+    increment2(){
+        this.setState(
+            {
+                score2: this.state.score2 + 1
+            }, () => {
+                this.getWinner();
+            });
+    }
+
+
+    decrement1(){
+        this.setState(
+            {
+                score1: this.state.score1 - 1
+            }, () => {
+                this.getWinner();
+        });
+    }
+
+    decrement2(){
+        this.setState(
+            {
+                score2: this.state.score2 - 1
+            }, () => {
+                this.getWinner();
+            });
     }
 }
 
